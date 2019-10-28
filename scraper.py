@@ -1,18 +1,10 @@
-from bs4 import BeautifulSoup
-import urllib.request
+from selenium import webdriver
 
-def parseAmount():
-    source = urllib.request.urlopen('https://teamtrees.org/')
-    # Get the amount of trees planted
-    soup = BeautifulSoup(source, 'html.parser')
-    amount = soup.find('div', id='totalTrees').getText()
-    
-    return amount
+chrome_path = r"C:\Users\woute\Desktop\chromedriver.exe"
+driver = webdriver.Chrome(chrome_path)
 
-def scrape():
-    amount = parseAmount()
-    print(amount)
+url = "https://teamtrees.org/"
+driver.get(url)
 
-scrape()
-
+print(driver.find_element_by_id("totalTrees").text)
 
