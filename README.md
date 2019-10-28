@@ -21,7 +21,7 @@ Open the terminal and run the script
 python scraper.py
 ```
 
-![picture](screenshot.png)
+![picture](screenshot.png | width=100)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
