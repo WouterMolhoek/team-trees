@@ -20,8 +20,5 @@ Open the terminal and run the script
 ```bash
 python scraper.py
 ```
-
-![picture](screenshot.png | width=100)
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
