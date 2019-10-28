@@ -8,7 +8,11 @@ Install Selenium:
 pip install selenium
 ```
 
-And download the Chrome webdriver compatible with your version of Chrome [here](https://chromedriver.chromium.org/downloads).
+And download the Chrome webdriver compatible with your version of Chrome [here](https://chromedriver.chromium.org/downloads). Copy the path of the chromedriver.exe and change the value of the chrome_path variable:
+
+```python
+chrome_path = r"PATH"
+```
 
 ## Usage
 Open the terminal and run the script
