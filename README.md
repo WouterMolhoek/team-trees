@@ -1,5 +1,5 @@
 # Team Trees 🌳
-A webscraper that gets the amount of trees planted every 10 seconds from [TeamTrees.org](https://teamtrees.org/).
+A webscraper that gets the amount of trees planted every 2 minutes from [TeamTrees.org](https://teamtrees.org/).
 
 ## Installation
 Install Selenium: 
@@ -20,6 +20,8 @@ Open the terminal and run the script
 ```bash
 python scraper.py
 ```
+
+![picture](screenshot.png)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
