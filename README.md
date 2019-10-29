@@ -20,11 +20,9 @@ Open the terminal and run the script
 ```bash
 python scraper.py
 ```
-<<<<<<< HEAD
 
-![picture](screenshot.png=100)
+![picture](screenshot.png | width=100)
 
-=======
->>>>>>> be100dfbfa5aa99e44755cded2d8f4b886b703a8
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
