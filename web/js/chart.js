@@ -14,12 +14,32 @@ async function makeChart() {
         data: {
             labels: xLabels,
             datasets: [{
-                label: 'Trees',
+                label: 'Team Trees Raise',
                 data: yMoney
             }]
         },
         options: {
             responsive: 'true',
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Time'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    ticks: {
+                        beginAtZero: true,
+                        max: 20000000
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Money'
+                    }
+                }]
+            }
         }
     });
 }
