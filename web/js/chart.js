@@ -4,10 +4,12 @@ let yMoney = [];
 // Innitialize chart
 makeChart();
 
+let chart;
+
 async function makeChart() {
     await getData();
     const ctx = document.getElementById('myChart');
-    new Chart(ctx, {
+    chart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: xLabels,
@@ -32,8 +34,26 @@ async function getData() {
     }
 }
 
-// Call python webscrape function every 10 seconds
+// Call python webscrape function every 30 seconds
 setInterval(() => {
     eel.getAmount();
-    makeChart();
-}, 10000)
+    updateData();
+}, 30000)
+
+
+// Update curent data 
+async function updateData() {
+    const response = await fetch('../data/data.json');
+    let data = await response.json();
+
+    addData(chart, data.trees[data.trees.length - 1][0], data.trees[data.trees.length - 1][1]);
+}
+
+// Add new data to the chart
+function addData(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+}
