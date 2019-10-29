@@ -14,7 +14,7 @@ async function makeChart() {
         data: {
             labels: xLabels,
             datasets: [{
-                label: 'Team Trees Raise',
+                label: 'Team Trees Raise 🌳',
                 data: yMoney
             }]
         },

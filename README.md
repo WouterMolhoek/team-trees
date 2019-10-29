@@ -1,7 +1,7 @@
 # Team Trees 🌳
 A python webscraper that gets the amount of money for [TeamTrees.org](https://teamtrees.org/) every 30 seconds and graphs it realtime. 
 
-<img src="web/img/screenshot.png" width="500"/>
+<img src="web/img/screenshot.png" width="800"/>
 
 ## Installation
 Install Selenium: 
