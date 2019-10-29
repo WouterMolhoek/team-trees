@@ -1,7 +1,11 @@
 import threading
 import json
+import eel
+
 from time import gmtime, strftime
 from selenium import webdriver
+
+eel.init('web', allowed_extensions=['.js', '.html'])
 
 # SET PATH HERE
 chrome_path = r"C:\Users\woute\Desktop\chromedriver.exe"
@@ -11,11 +15,7 @@ driver = webdriver.Chrome(chrome_path)
 data = {}
 data['trees'] = []
 
-def setInterval(func,time):
-    e = threading.Event()
-    while not e.wait(time):
-        func()
-
+@eel.expose
 def getAmount():
     # Refresh the page
     driver.get("https://teamtrees.org/")
@@ -23,7 +23,7 @@ def getAmount():
     data['trees'].append([strftime("%H:%M:%S", gmtime()),driver.find_element_by_id("totalTrees").text.replace(',','')])
 
     # Write data to an JSON file
-    with open('data.json', 'w') as outfile:
+    with open('web/data/data.json', 'w') as outfile:
         json.dump(data, outfile)
 
-setInterval(getAmount,120)
+eel.start('index.html')
