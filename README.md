@@ -1,4 +1,4 @@
-# Team Trees 🌳
+# Team Trees | Data visualisation 🌳
 A python webscraper that gets the amount of money for [TeamTrees.org](https://teamtrees.org/) every 30 seconds and graphs it realtime. 
 
 <img src="web/img/screenshot.png" width="800"/>
